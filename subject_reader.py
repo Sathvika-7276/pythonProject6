@@ -7,23 +7,32 @@ FILENAME = "subject_data.txt"
 
 
 def main():
-    data = get_data()
-    print(data)
+    read_data = read_file()
+    process_data = get_data(read_data)
+    print(process_data)
+    print_newlines(process_data)
 
 
-def get_data():
-    """Read data from file formatted like: subject,lecturer,number of students."""
+def read_file():
     input_file = open(FILENAME)
-    for line in input_file:
-        print(line)  # See what a line looks like
-        print(repr(line))  # See what a line really looks like
-        line = line.strip()  # Remove the \n
-        parts = line.split(',')  # Separate the data into its parts
-        print(parts)  # See what the parts look like (notice the integer is a string)
-        parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
-        print(parts)  # See if that worked
-        print("----------")
+    data = input_file.readlines()
     input_file.close()
+    return data
+
+
+def get_data(read_data):
+    nested_line = []
+    for line in read_data:
+        lines = line.strip()
+        parts = lines.split(',')
+        parts[2] = int(parts[2])
+        nested_line.append(parts)
+    return nested_line
+
+
+def print_newlines(nested_line):
+    for line in nested_line:
+        print("{} is taught by {:12} and has {:3} students".format(*line))
 
 
 main()
