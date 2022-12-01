@@ -1,3 +1,4 @@
+# 1.Basic list operations
 Numbers = []
 NUMBER_OF_INPUTS = 5
 for i in range(NUMBER_OF_INPUTS):
@@ -9,6 +10,7 @@ print(f"The smallest number is {min(Numbers)}")
 print(f"The largest number is {max(Numbers)}")
 print(f"the average of the numbers is {sum(Numbers)/len(Numbers)}")
 
+# 2.Woefully inadequate security checker
 usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45',
              'BaseInterpreterInterface','BaseStdIn','Command', 'ExecState',
              'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
