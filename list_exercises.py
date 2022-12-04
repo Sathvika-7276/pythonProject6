@@ -12,7 +12,7 @@ print(f"the average of the numbers is {sum(Numbers)/len(Numbers)}")
 
 # 2.Woefully inadequate security checker
 usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45',
-             'BaseInterpreterInterface','BaseStdIn','Command', 'ExecState',
+             'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState',
              'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
 username = input("Enter your name:")
 if username in usernames:
